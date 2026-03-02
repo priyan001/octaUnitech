@@ -16,8 +16,10 @@ const montserrat = Montserrat({
   display: 'swap',
 })
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+
 export const metadata: Metadata = {
-  icons: { icon: '/favicon.png' },
+  icons: { icon: `${BASE}/favicon.png` },
   title: 'OctaUnitech Solutions – Cloud, DevOps & IT Consulting',
   description:
     'OctaUnitech delivers end-to-end Cloud, DevOps, and Digital Transformation services — trusted by Fortune 500 firms for over a decade. Based in Bangalore, India.',
