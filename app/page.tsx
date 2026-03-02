@@ -4,6 +4,7 @@ import VisionMission from '@/components/VisionMission'
 import About from '@/components/About'
 import Services from '@/components/Services'
 import WhyUs from '@/components/WhyUs'
+import Careers from '@/components/Careers'
 import Testimonial from '@/components/Testimonial'
 import CTA from '@/components/CTA'
 import Footer from '@/components/Footer'
@@ -46,6 +47,7 @@ export default function Home() {
         <About />
         <Services />
         <WhyUs />
+        <Careers />
 
         {/* Client Logos */}
         <div className="clients-wrap">
