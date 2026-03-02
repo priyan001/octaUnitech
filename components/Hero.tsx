@@ -123,7 +123,7 @@ export default function Hero() {
             {/* RIGHT — image */}
             <div className="hero-slide-img">
               <Image
-                src={slide.image}
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}${slide.image}`}
                 alt={slide.imageAlt}
                 fill
                 sizes="50vw"
