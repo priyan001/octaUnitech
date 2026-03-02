@@ -10,8 +10,11 @@
  */
 
 import { NextResponse } from 'next/server'
-// nodemailer is loaded dynamically so static export builds succeed without it installed.
-// Run  npm install nodemailer  when deploying to a server environment.
+
+// Required by Next.js output:'export' — tells the static build to skip this route.
+// The email API only works when deployed to a server (not GitHub Pages).
+// Run  npm install nodemailer  before using on a server.
+export const dynamic = 'force-static'
 
 /* ── Reject non-POST ── */
 export async function GET() {
