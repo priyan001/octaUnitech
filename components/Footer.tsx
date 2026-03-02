@@ -8,7 +8,7 @@ export default function Footer() {
         <div>
           <Link href="/" className="footer-logo-img">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo.png" alt="OctaUnitech" />
+            <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/logo.png`} alt="OctaUnitech" />
           </Link>
           <p className="footer-desc">
             Cloud, Technology, and Consulting Services since 2010. Bangalore, India.

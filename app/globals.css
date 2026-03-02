@@ -1559,12 +1559,25 @@ body {
   .stats-strip { flex-direction: column; align-items: center; padding: 24px 20px; }
   .stat { min-width: 100%; max-width: 100%; border-right: none; border-bottom: 1px solid var(--border); padding: 16px 0; }
   .stat:last-child { border-bottom: none; }
-  .hero-carousel { min-height: 480px; }
-  /* Stack vertically on mobile: image on top, text below */
-  .hero-slide { grid-template-columns: 1fr; grid-template-rows: 240px auto; }
+  /* Mobile hero: let content height be natural — no absolute stacking */
+  .hero-carousel { min-height: 0; }
+  /* Non-active slides hidden with display:none so they take no space */
+  .hero-slide {
+    position: relative;
+    inset: auto;
+    display: none;
+    opacity: 1;
+    pointer-events: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 220px auto;
+  }
+  .hero-slide.active {
+    display: grid;
+    pointer-events: all;
+  }
   .hero-slide-img { order: -1; }
   .hero-slide-text {
-    padding: 28px 24px;
+    padding: 28px 24px 32px;
     text-align: center;
   }
   .hero-slide-text .hero-eyebrow { justify-content: center; }
@@ -1572,7 +1585,7 @@ body {
   .hero-slide-text .hero-title { text-align: center; }
   .hero-slide-text .hero-sub { margin-left: auto; margin-right: auto; text-align: center; }
   .hero-slide-text .hero-actions { justify-content: center; }
-  .carousel-nav { padding: 16px 0 20px; }
+  .carousel-nav { padding: 14px 0 18px; }
   .testimonial-section { padding: 60px 20px; }
   .cta-section { padding: 80px 20px; }
   .nav { padding: 0 24px; }
