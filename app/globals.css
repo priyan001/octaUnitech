@@ -416,7 +416,7 @@ body {
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2.6rem, 6.5vw, 5.2rem);
+  font-size: clamp(1.9rem, 4vw, 3rem);
   font-weight: 800;
   line-height: 1.05;
   letter-spacing: -0.01em;
@@ -755,7 +755,7 @@ body {
 
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(1.9rem, 3.8vw, 3rem);
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
   font-weight: 800;
   line-height: 1.1;
   text-transform: uppercase;
@@ -804,7 +804,7 @@ body {
 /* ── VISION & MISSION ── */
 .vm-section {
   background: var(--bg);
-  padding: 88px 40px;
+  padding: 60px 40px;
   border-bottom: 1px solid var(--border);
 }
 
@@ -876,7 +876,7 @@ body {
 /* ── ABOUT ── */
 .about-section {
   border-top: 1px solid var(--border);
-  padding: 120px 60px;
+  padding: 88px 60px;
   background: var(--bg);
 }
 
@@ -894,7 +894,7 @@ body {
 
 .about-title {
   font-family: var(--font-display);
-  font-size: clamp(1.9rem, 3.8vw, 3rem);
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
   font-weight: 800;
   line-height: 1.1;
   text-transform: uppercase;
@@ -991,7 +991,7 @@ body {
 }
 
 .services-section {
-  padding: 120px 60px;
+  padding: 88px 60px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -1014,7 +1014,7 @@ body {
 
 .service-card {
   background: var(--bg);
-  padding: 44px 36px 56px;
+  padding: 32px 28px 36px;
   position: relative;
   overflow: hidden;
   transition: background 0.4s, box-shadow 0.4s;
@@ -1066,28 +1066,40 @@ body {
 }
 
 .service-icon-wrap {
-  width: 44px;
-  height: 44px;
-  margin-bottom: 22px;
+  width: 52px;
+  height: 52px;
+  background: var(--accent-dim);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  flex-shrink: 0;
+  transition: background 0.3s ease;
 }
 
 .service-icon-wrap svg {
-  width: 44px;
-  height: 44px;
-  stroke: rgba(249, 115, 22, 0.4);
+  width: 26px;
+  height: 26px;
+  stroke: var(--accent);
   fill: none;
-  transition: stroke 0.35s, filter 0.35s;
+  stroke-width: 1.5;
   overflow: visible;
+  transition: stroke 0.3s ease;
+}
+
+.service-card:hover .service-icon-wrap {
+  background: var(--accent);
 }
 
 .service-card:hover .service-icon-wrap svg {
-  stroke: var(--accent);
-  filter: drop-shadow(0 0 6px rgba(249, 115, 22, 0.35));
+  stroke: #ffffff;
+  filter: none;
 }
 
 .service-name {
   font-family: var(--font-display);
-  font-size: 0.88rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.09em;
@@ -1137,7 +1149,7 @@ body {
 }
 
 .why-section {
-  padding: 120px 60px;
+  padding: 88px 60px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -1250,7 +1262,7 @@ body {
 
 /* ── TESTIMONIAL ── */
 .testimonial-section {
-  padding: 120px 60px;
+  padding: 88px 60px;
   border-top: 1px solid var(--border);
   text-align: center;
   position: relative;
@@ -1306,7 +1318,7 @@ body {
 
 /* ── CTA ── */
 .cta-section {
-  padding: 140px 60px;
+  padding: 100px 60px;
   border-top: 1px solid var(--border);
   text-align: center;
   position: relative;
@@ -1332,7 +1344,7 @@ body {
 
 .cta-title {
   font-family: var(--font-display);
-  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-size: clamp(1.8rem, 3.2vw, 3rem);
   font-weight: 800;
   line-height: 1.05;
   text-transform: uppercase;
@@ -1538,7 +1550,7 @@ body {
 
 .careers-content {
   background: var(--bg-section);
-  padding: 72px 64px 72px 56px;
+  padding: 56px 56px 56px 48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1547,7 +1559,7 @@ body {
 
 .careers-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
   font-weight: 800;
   color: var(--text);
   line-height: 1.15;
@@ -1621,15 +1633,15 @@ body {
 @media (max-width: 1024px) {
   .nav { padding: 0 32px; }
   .mega-menu { padding: 32px; grid-template-columns: 1fr 1fr; }
-  .about-section { padding: 80px 32px; }
+  .about-section { padding: 64px 32px; }
   .about-grid { grid-template-columns: 1fr; gap: 50px; }
   .about-stats { grid-template-columns: repeat(4, 1fr); }
-  .services-section { padding: 80px 32px; }
+  .services-section { padding: 64px 32px; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
-  .why-section { padding: 80px 32px; }
+  .why-section { padding: 64px 32px; }
   .why-grid { grid-template-columns: repeat(2, 1fr); }
-  .testimonial-section { padding: 80px 32px; }
-  .cta-section { padding: 100px 32px; }
+  .testimonial-section { padding: 64px 32px; }
+  .cta-section { padding: 80px 32px; }
   .cert-band { padding: 26px 32px; gap: 32px; }
   .clients-section { padding: 60px 32px; }
   .footer { grid-template-columns: 1fr 1fr; padding: 60px 32px 40px; }
@@ -1647,12 +1659,12 @@ body {
   .mega-menu { display: none !important; }
   .hero-deco { display: none; }
   .hero-grid { display: none; }
-  .services-section { padding: 60px 20px; }
+  .services-section { padding: 48px 20px; }
   .services-header { flex-direction: column; align-items: flex-start; gap: 20px; }
   .services-grid { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: 1fr; }
-  .why-section { padding: 60px 20px; }
-  .about-section { padding: 60px 20px; }
+  .why-section { padding: 48px 20px; }
+  .about-section { padding: 48px 20px; }
   .about-stats { grid-template-columns: 1fr 1fr; }
   .careers-section { grid-template-columns: 1fr; }
   .careers-img-col { min-height: 260px; }
