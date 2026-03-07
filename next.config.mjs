@@ -1,14 +1,19 @@
 /** @type {import('next').NextConfig} */
+
+// basePath is only needed on GitHub Pages (production).
+// In local dev (npm run dev) it stays empty so the site loads at localhost:3000.
+const isProd = process.env.NODE_ENV === 'production'
+const basePath = isProd ? '/octaUnitech' : ''
+
 const nextConfig = {
-  output: 'export',           // static export for GitHub Pages
-  basePath: '/octaUnitech',   // must match the GitHub repo name (case-sensitive)
-  assetPrefix: '/octaUnitech',
+  output: 'export',
+  basePath,
+  assetPrefix: basePath,
   images: {
-    unoptimized: true,        // required for static export
+    unoptimized: true,
   },
-  // Expose basePath to client components (used by Navbar logo)
   env: {
-    NEXT_PUBLIC_BASE_PATH: '/octaUnitech',
+    NEXT_PUBLIC_BASE_PATH: basePath,
   },
   reactCompiler: true,
 };
